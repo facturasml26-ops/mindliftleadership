@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 230" width="300" height="230">
+  <!-- Top chevron: peak at center top, white left face, teal right face -->
+  <polygon points="150,8 72,78 150,50" fill="#ffffff"/>
+  <polygon points="150,8 228,78 150,50" fill="#3dbcb8"/>
+  <!-- Small dark-teal triangle below chevron junction -->
+  <polygon points="150,56 136,78 164,78" fill="#1a8aa8"/>
+  <!-- MINDLIFT: MIND white, LIFT gold, centered -->
+  <text x="150" y="148" font-family="'Inter',Arial,sans-serif" font-weight="800" font-size="52" text-anchor="middle" letter-spacing="-1">
+    <tspan fill="#ffffff">MIND</tspan><tspan fill="#c9a03a">LIFT</tspan>
+  </text>
+  <!-- LEADERSHIP centered, wide spacing -->
+  <text x="150" y="174" font-family="'Inter',Arial,sans-serif" font-weight="400" font-size="15" fill="#c9a03a" letter-spacing="6" text-anchor="middle">LEADERSHIP</text>
+  <!-- Bottom V chevron -->
+  <polyline points="108,200 150,222 192,200" fill="none" stroke="#3dbcb8" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>
