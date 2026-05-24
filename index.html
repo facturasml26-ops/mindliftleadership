@@ -242,8 +242,9 @@
       (function(){
         var c=document.getElementById('statsCarousel');
         if(!c)return;
-        c.addEventListener('click',function(){c.classList.toggle('paused');});
-        c.addEventListener('touchstart',function(){c.classList.toggle('paused');},{passive:true});
+        c.addEventListener('touchstart',function(){c.classList.add('paused');},{passive:true});
+        c.addEventListener('touchend',function(){c.classList.remove('paused');},{passive:true});
+        c.addEventListener('touchcancel',function(){c.classList.remove('paused');},{passive:true});
       })();
     </script>
 
@@ -314,8 +315,9 @@
         (function(){
           var c=document.getElementById('painCarousel');
           if(!c)return;
-          c.addEventListener('click',function(){c.classList.toggle('paused');});
-          c.addEventListener('touchstart',function(){c.classList.toggle('paused');},{passive:true});
+          c.addEventListener('touchstart',function(){c.classList.add('paused');},{passive:true});
+          c.addEventListener('touchend',function(){c.classList.remove('paused');},{passive:true});
+          c.addEventListener('touchcancel',function(){c.classList.remove('paused');},{passive:true});
         })();
       </script>
     </div>
@@ -343,8 +345,9 @@
       (function(){
         var c=document.getElementById('servicesCarousel');
         if(!c)return;
-        c.addEventListener('click',function(){c.classList.toggle('paused');});
-        c.addEventListener('touchstart',function(){c.classList.toggle('paused');},{passive:true});
+        c.addEventListener('touchstart',function(){c.classList.add('paused');},{passive:true});
+        c.addEventListener('touchend',function(){c.classList.remove('paused');},{passive:true});
+        c.addEventListener('touchcancel',function(){c.classList.remove('paused');},{passive:true});
       })();
     </script>
   </div>
