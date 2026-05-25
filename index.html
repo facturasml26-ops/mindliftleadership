@@ -78,6 +78,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
 <link rel="stylesheet" href="css/styles.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 
@@ -163,17 +164,17 @@
 <section class="action-section">
   <h2 class="fade-up">Liderazgo en acción</h2>
   <div class="action-grid">
-    <div class="action-card fade-up">
+    <div class="action-card fade-up" onclick="location.href='#lideres'" style="cursor:pointer;">
       <div class="action-card-icon"><i class="fa-solid fa-user-tie"></i></div>
       <h3>Líderes</h3>
       <p>¿Das todo como líder pero no sos reconocido estratégicamente? Sigues atrapado en lo operativo, tu equipo depende de vos para todo y la visibilidad que merecés no llega.</p>
     </div>
-    <div class="action-card fade-up">
+    <div class="action-card fade-up" onclick="location.href='#organizaciones'" style="cursor:pointer;">
       <div class="action-card-icon"><i class="fa-solid fa-building-columns"></i></div>
       <h3>Organizaciones</h3>
       <p>¿Tus líderes tienen expertise técnico pero no generan influencia real? Los métodos tradicionales de formación no están cambiando nada.</p>
     </div>
-    <div class="action-card fade-up">
+    <div class="action-card fade-up" onclick="location.href='#conferencias-keynotes'" style="cursor:pointer;">
       <div class="action-card-icon"><i class="fa-solid fa-microphone-lines"></i></div>
       <h3>Conferencias &amp; Key Notes</h3>
       <p>¿Buscás una conferencista que transforme, no solo informe? Una voz que conecte desde la experiencia real y la neurociencia aplicada.</p>
@@ -202,51 +203,25 @@
       <p class="science-overline">La ciencia lo respalda</p>
       <h2>El coaching de liderazgo no es tendencia. Es evidencia.</h2>
     </div>
-    <div class="stats-carousel-wrap">
-      <div class="stats-grid" id="statsCarousel">
-        <!-- original set -->
-        <div class="stat-item">
+    <div class="swiper stats-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="stat-item">
           <div class="stat-big-num">88%</div>
           <div class="stat-label">de incremento en productividad cuando la capacitación se combina con coaching</div>
           <div class="stat-source">Harvard Business Review</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-big-num gold">7x</div>
+        </div></div>
+        <div class="swiper-slide"><div class="stat-item">
+          <div class="stat-big-num">7x</div>
           <div class="stat-label">el retorno promedio sobre la inversión en coaching ejecutivo</div>
-          <div class="stat-source gold">PwC &amp; Association Resource Center</div>
-        </div>
-        <div class="stat-item">
+          <div class="stat-source">PwC &amp; Association Resource Center</div>
+        </div></div>
+        <div class="swiper-slide"><div class="stat-item">
           <div class="stat-big-num">77%</div>
           <div class="stat-label">de ejecutivos reportaron impacto en al menos una métrica clave de negocio</div>
           <div class="stat-source">MetrixGlobal LLC / Fortune 500</div>
-        </div>
-        <!-- duplicate set for seamless loop -->
-        <div class="stat-item">
-          <div class="stat-big-num">88%</div>
-          <div class="stat-label">de incremento en productividad cuando la capacitación se combina con coaching</div>
-          <div class="stat-source">Harvard Business Review</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-big-num gold">7x</div>
-          <div class="stat-label">el retorno promedio sobre la inversión en coaching ejecutivo</div>
-          <div class="stat-source gold">PwC &amp; Association Resource Center</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-big-num">77%</div>
-          <div class="stat-label">de ejecutivos reportaron impacto en al menos una métrica clave de negocio</div>
-          <div class="stat-source">MetrixGlobal LLC / Fortune 500</div>
-        </div>
+        </div></div>
       </div>
     </div>
-    <script>
-      (function(){
-        var c=document.getElementById('statsCarousel');
-        if(!c)return;
-        c.addEventListener('touchstart',function(){c.classList.add('paused');},{passive:true});
-        c.addEventListener('touchend',function(){c.classList.remove('paused');},{passive:true});
-        c.addEventListener('touchcancel',function(){c.classList.remove('paused');},{passive:true});
-      })();
-    </script>
 
     <div class="stats-closing fade-up">
       <p>La capacitación sola incrementa la productividad en un <strong>22%</strong>. Combinada con coaching, sube al <strong>88%</strong>.<br/>La diferencia no está en la información, está en la transformación.</p>
@@ -294,32 +269,16 @@
         <p class="science-overline">Reconocemos los retos que enfrenta tu organización</p>
         <p>Estas no son suposiciones. Son los patrones que más se repiten en las organizaciones con las que trabajamos.</p>
       </div>
-      <div class="pain-carousel-wrap">
-        <div class="pain-grid" id="painCarousel">
-          <div class="pain-item"><div class="pain-num">01</div><h4>Equipos con fricción interna</h4><p>Conflictos no resueltos, comunicación rota y colaboración superficial que drenan energía y ralentizan resultados.</p></div>
-          <div class="pain-item"><div class="pain-num">02</div><h4>Líderes técnicos que tocaron techo</h4><p>Sus habilidades los trajeron hasta aquí, pero el liderazgo relacional e influencia ya no es opcional para seguir escalando.</p></div>
-          <div class="pain-item pain-item--white"><div class="pain-num">03</div><h4>Resistencia al cambio</h4><p>Reestructuraciones, fusiones o nuevas directrices que generan incertidumbre, parálisis y sabotaje silencioso.</p></div>
-          <div class="pain-item"><div class="pain-num">04</div><h4>Cultura que no acompaña la estrategia</h4><p>La dirección tiene claridad, pero la cultura del equipo no la refleja. El 'cómo' no está alineado con el 'qué'.</p></div>
-          <div class="pain-item"><div class="pain-num">05</div><h4>Pérdida de talento clave</h4><p>Los mejores se van. No siempre por salario. Se van por las relaciones con sus jefes, por el ambiente o por falta de desarrollo.</p></div>
-          <div class="pain-item"><div class="pain-num">06</div><h4>Líderes bajo presión sin herramientas</h4><p>La exigencia sube, el soporte no. Líderes que operan en modo reactivo, desgastados y sin espacio para pensar estratégicamente.</p></div>
-          <!-- duplicate for seamless loop -->
-          <div class="pain-item"><div class="pain-num">01</div><h4>Equipos con fricción interna</h4><p>Conflictos no resueltos, comunicación rota y colaboración superficial que drenan energía y ralentizan resultados.</p></div>
-          <div class="pain-item"><div class="pain-num">02</div><h4>Líderes técnicos que tocaron techo</h4><p>Sus habilidades los trajeron hasta aquí, pero el liderazgo relacional e influencia ya no es opcional para seguir escalando.</p></div>
-          <div class="pain-item pain-item--white"><div class="pain-num">03</div><h4>Resistencia al cambio</h4><p>Reestructuraciones, fusiones o nuevas directrices que generan incertidumbre, parálisis y sabotaje silencioso.</p></div>
-          <div class="pain-item"><div class="pain-num">04</div><h4>Cultura que no acompaña la estrategia</h4><p>La dirección tiene claridad, pero la cultura del equipo no la refleja. El 'cómo' no está alineado con el 'qué'.</p></div>
-          <div class="pain-item"><div class="pain-num">05</div><h4>Pérdida de talento clave</h4><p>Los mejores se van. No siempre por salario. Se van por las relaciones con sus jefes, por el ambiente o por falta de desarrollo.</p></div>
-          <div class="pain-item"><div class="pain-num">06</div><h4>Líderes bajo presión sin herramientas</h4><p>La exigencia sube, el soporte no. Líderes que operan en modo reactivo, desgastados y sin espacio para pensar estratégicamente.</p></div>
+      <div class="swiper pain-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="pain-item"><div class="pain-num">01</div><h4>Equipos con fricción interna</h4><p>Conflictos no resueltos, comunicación rota y colaboración superficial que drenan energía y ralentizan resultados.</p></div></div>
+          <div class="swiper-slide"><div class="pain-item"><div class="pain-num">02</div><h4>Líderes técnicos que tocaron techo</h4><p>Sus habilidades los trajeron hasta aquí, pero el liderazgo relacional e influencia ya no es opcional para seguir escalando.</p></div></div>
+          <div class="swiper-slide"><div class="pain-item"><div class="pain-num">03</div><h4>Resistencia al cambio</h4><p>Reestructuraciones, fusiones o nuevas directrices que generan incertidumbre, parálisis y sabotaje silencioso.</p></div></div>
+          <div class="swiper-slide"><div class="pain-item"><div class="pain-num">04</div><h4>Cultura que no acompaña la estrategia</h4><p>La dirección tiene claridad, pero la cultura del equipo no la refleja. El 'cómo' no está alineado con el 'qué'.</p></div></div>
+          <div class="swiper-slide"><div class="pain-item"><div class="pain-num">05</div><h4>Pérdida de talento clave</h4><p>Los mejores se van. No siempre por salario. Se van por las relaciones con sus jefes, por el ambiente o por falta de desarrollo.</p></div></div>
+          <div class="swiper-slide"><div class="pain-item"><div class="pain-num">06</div><h4>Líderes bajo presión sin herramientas</h4><p>La exigencia sube, el soporte no. Líderes que operan en modo reactivo, desgastados y sin espacio para pensar estratégicamente.</p></div></div>
         </div>
       </div>
-      <script>
-        (function(){
-          var c=document.getElementById('painCarousel');
-          if(!c)return;
-          c.addEventListener('touchstart',function(){c.classList.add('paused');},{passive:true});
-          c.addEventListener('touchend',function(){c.classList.remove('paused');},{passive:true});
-          c.addEventListener('touchcancel',function(){c.classList.remove('paused');},{passive:true});
-        })();
-      </script>
     </div>
   </div>
 </section>
@@ -328,28 +287,14 @@
 <section class="services-empresariales-section">
   <div class="services-inner">
     <h2 class="services-sub-title">Servicios empresariales</h2>
-    <div class="services-carousel-wrap">
-      <div class="services-grid" id="servicesCarousel">
-        <div class="service-card teal" id="conferencias"><span class="service-card-num">01</span><span class="service-badge"><i class="fa-solid fa-microphone"></i> Presencial / Virtual</span><h3>Conferencias &amp; Key Notes</h3><p>Liderazgo de Alto Impacto para Eventos Corporativos. Experiencias formativas para convenciones, retiros ejecutivos y activaciones de cultura. Basadas en Maxwell Leadership® e integradas con neurociencia y el marco de trabajo La Escalera de la Influencia®.</p></div>
-        <div class="service-card gold"><span class="service-card-num">02</span><span class="service-badge"><i class="fa-solid fa-people-group"></i> Gerencias &amp; Divisiones</span><h3>Desarrollo de Equipos</h3><p>Intervención en equipos de alto impacto. Proceso estructurado para equipos con fricción interna o baja colaboración. Trabaja desde la raíz conductual, no desde la motivación superficial.</p></div>
-        <div class="service-card gold"><span class="service-card-num">03</span><span class="service-badge"><i class="fa-solid fa-shield-halved"></i> RRHH / Dirección General</span><h3>Intervención en Conflicto Persistente</h3><p>Consultoría para organizaciones donde los métodos convencionales no han resuelto el conflicto. Mapeo de detonadores y plan accionable.</p></div>
-        <div class="service-card teal"><span class="service-card-num">04</span><span class="service-badge"><i class="fa-solid fa-arrows-spin"></i> Estratégico - Multidivisional</span><h3>Consultoría en Gestión de Cambio Organizacional</h3><p>Facilitación de reestructuraciones, implementaciones de sistemas, fusiones y nuevas culturas con foco en reducir la resistencia humana y acelerar la adopción. El factor humano, gestionado.</p></div>
-        <!-- duplicate for seamless loop -->
-        <div class="service-card teal"><span class="service-card-num">01</span><span class="service-badge"><i class="fa-solid fa-microphone"></i> Presencial / Virtual</span><h3>Conferencias &amp; Key Notes</h3><p>Liderazgo de Alto Impacto para Eventos Corporativos. Experiencias formativas para convenciones, retiros ejecutivos y activaciones de cultura. Basadas en Maxwell Leadership® e integradas con neurociencia y el marco de trabajo La Escalera de la Influencia®.</p></div>
-        <div class="service-card gold"><span class="service-card-num">02</span><span class="service-badge"><i class="fa-solid fa-people-group"></i> Gerencias &amp; Divisiones</span><h3>Desarrollo de Equipos</h3><p>Intervención en equipos de alto impacto. Proceso estructurado para equipos con fricción interna o baja colaboración. Trabaja desde la raíz conductual, no desde la motivación superficial.</p></div>
-        <div class="service-card gold"><span class="service-card-num">03</span><span class="service-badge"><i class="fa-solid fa-shield-halved"></i> RRHH / Dirección General</span><h3>Intervención en Conflicto Persistente</h3><p>Consultoría para organizaciones donde los métodos convencionales no han resuelto el conflicto. Mapeo de detonadores y plan accionable.</p></div>
-        <div class="service-card teal"><span class="service-card-num">04</span><span class="service-badge"><i class="fa-solid fa-arrows-spin"></i> Estratégico - Multidivisional</span><h3>Consultoría en Gestión de Cambio Organizacional</h3><p>Facilitación de reestructuraciones, implementaciones de sistemas, fusiones y nuevas culturas con foco en reducir la resistencia humana y acelerar la adopción. El factor humano, gestionado.</p></div>
+    <div class="swiper services-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="service-card" id="conferencias"><span class="service-card-num">01</span><span class="service-badge"><i class="fa-solid fa-microphone"></i> Presencial / Virtual</span><h3>Conferencias &amp; Key Notes</h3><p>Liderazgo de Alto Impacto para Eventos Corporativos. Experiencias formativas para convenciones, retiros ejecutivos y activaciones de cultura. Basadas en Maxwell Leadership® e integradas con neurociencia y el marco de trabajo La Escalera de la Influencia®.</p></div></div>
+        <div class="swiper-slide"><div class="service-card"><span class="service-card-num">02</span><span class="service-badge"><i class="fa-solid fa-people-group"></i> Gerencias &amp; Divisiones</span><h3>Desarrollo de Equipos</h3><p>Intervención en equipos de alto impacto. Proceso estructurado para equipos con fricción interna o baja colaboración. Trabaja desde la raíz conductual, no desde la motivación superficial.</p></div></div>
+        <div class="swiper-slide"><div class="service-card"><span class="service-card-num">03</span><span class="service-badge"><i class="fa-solid fa-shield-halved"></i> RRHH / Dirección General</span><h3>Intervención en Conflicto Persistente</h3><p>Consultoría para organizaciones donde los métodos convencionales no han resuelto el conflicto. Mapeo de detonadores y plan accionable.</p></div></div>
+        <div class="swiper-slide"><div class="service-card"><span class="service-card-num">04</span><span class="service-badge"><i class="fa-solid fa-arrows-spin"></i> Estratégico - Multidivisional</span><h3>Consultoría en Gestión de Cambio Organizacional</h3><p>Facilitación de reestructuraciones, implementaciones de sistemas, fusiones y nuevas culturas con foco en reducir la resistencia humana y acelerar la adopción. El factor humano, gestionado.</p></div></div>
       </div>
     </div>
-    <script>
-      (function(){
-        var c=document.getElementById('servicesCarousel');
-        if(!c)return;
-        c.addEventListener('touchstart',function(){c.classList.add('paused');},{passive:true});
-        c.addEventListener('touchend',function(){c.classList.remove('paused');},{passive:true});
-        c.addEventListener('touchcancel',function(){c.classList.remove('paused');},{passive:true});
-      })();
-    </script>
   </div>
 </section>
 
@@ -393,7 +338,7 @@
   <div class="clients-inner">
     <p class="clients-title">Organizaciones con líderes que han confiado en MindLift Leadership</p>
     <div class="clients-img-wrap">
-      <img src="assets/img/logos-clientes.jpg" alt="Clientes: Font, BTIS, act!, Walmart, TEC, BP, Seguro Social Costa Rica, SOIN, CAPREDE" class="clients-img"/>
+      <img src="assets/img/logos-clientes.png" alt="Clientes: Font, BTIS, act!, Walmart, TEC, BP, Seguro Social Costa Rica, SOIN, CAPREDE" class="clients-img"/>
     </div>
   </div>
 </section>
@@ -637,6 +582,19 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-up, .fade-in').forEach(el => observer.observe(el));
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiperConfig = {
+    slidesPerView: 'auto',
+    grabCursor: true,
+    loop: false,
+    autoplay: { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true },
+    on: { beforeInit: function(s){ s.el.style.overflow='visible'; } }
+  };
+  new Swiper('.stats-swiper',    Object.assign({}, swiperConfig, { spaceBetween: 24 }));
+  new Swiper('.pain-swiper',     Object.assign({}, swiperConfig, { spaceBetween: 20 }));
+  new Swiper('.services-swiper', Object.assign({}, swiperConfig, { spaceBetween: 20 }));
+</script>
 </body>
 </html>
 
