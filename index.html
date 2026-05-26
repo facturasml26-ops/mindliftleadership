@@ -76,6 +76,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<!-- Preload hero background so it starts downloading immediately -->
+<link rel="preload" as="image" fetchpriority="high" href="assets/img/hero-bg.webp" type="image/webp"/>
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
 <link rel="stylesheet" href="css/styles.css"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -594,6 +596,13 @@ document.querySelectorAll('.fade-up, .fade-in').forEach(el => observer.observe(e
   new Swiper('.stats-swiper',    Object.assign({}, swiperConfig, { spaceBetween: 24 }));
   new Swiper('.pain-swiper',     Object.assign({}, swiperConfig, { spaceBetween: 20 }));
   new Swiper('.services-swiper', Object.assign({}, swiperConfig, { spaceBetween: 20 }));
+
+  // Hero background blur-up: swap from LQIP placeholder to full WebP
+  (function(){
+    var heroImg = new Image();
+    heroImg.onload = function(){ var h = document.querySelector('.hero'); if(h) h.classList.add('hero--loaded'); };
+    heroImg.src = 'assets/img/hero-bg.webp';
+  })();
 </script>
 </body>
 </html>
