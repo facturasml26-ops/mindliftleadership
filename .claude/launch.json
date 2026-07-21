@@ -6,6 +6,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "-l", "3000", "."],
       "port": 3000
+    },
+    {
+      "name": "landingPageML-5",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "3501", "C:\\Users\\Aza\\Documents\\landingPageML\\5\\landingPageML"],
+      "port": 3501
     }
   ]
 }
